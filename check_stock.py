@@ -6,12 +6,13 @@ import time
 
 # Configuration
 PRODUCT_URL = "https://shop.amul.com/product/amul-whey-protein-chocolate-34g-pack-of-60-sachets"  # Replace with the actual product URL
-CHECK_INTERVAL = 3600  # Check every hour (in seconds)
+CHECK_INTERVAL = 300  # Check every 5 minutes (in seconds)
 EMAIL_SENDER = "your_email@gmail.com"  # Your email
 EMAIL_PASSWORD = "your_app_password"  # App-specific password
 EMAIL_RECEIVER = "receiver_email@gmail.com"  # Your email or another recipient
 SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
+MAX_RUNTIME = 5 * 3600  # 5 hours (GitHub Actions job limit is 6 hours)
 
 def send_email(subject, body):
     """Send an email notification."""
