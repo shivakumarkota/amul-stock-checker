@@ -11,7 +11,7 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(message)s')
 # Configuration
 API_URL = "https://shop.amul.com/api/1/entity/ms.products?q=%7B%22alias%22:%22amul-chocolate-whey-protein-34-g-or-pack-of-60-sachets%22%7D&limit=1"
 PRODUCT_URL = "https://shop.amul.com/en/product/amul-chocolate-whey-protein-34-g-or-pack-of-60-sachets"
-CHECK_INTERVAL = 300  # Check every 5 minutes (in seconds)
+CHECK_INTERVAL = 1800  # Check every 30 minutes (in seconds)
 EMAIL_SENDER = os.getenv("EMAIL_SENDER")
 EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD")
 EMAIL_RECEIVER = os.getenv("EMAIL_RECEIVER")
